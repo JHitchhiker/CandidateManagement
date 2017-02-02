@@ -1,0 +1,15 @@
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Service\bin\Release\CandidateManagement.Service.dll
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Service\bin\Release\CandidateManagement.Service.pdb
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Service\bin\Release\CandidateManagement.DAL.dll
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Service\bin\Release\CandidateManagement.Data.dll
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Service\bin\Release\EntityFramework.dll
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Service\bin\Release\CandidateManagement.DAL.pdb
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Service\bin\Release\CandidateManagement.Data.pdb
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Service\bin\Release\EntityFramework.xml
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Service\obj\Release\CandidateManagement.Service.csprojResolveAssemblyReference.cache
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Service\obj\Release\CandidateManagement.Service.dll
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Service\obj\Release\CandidateManagement.Service.pdb
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Service\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Service\bin\Release\Microsoft.AspNet.Identity.Core.dll
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Service\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Service\bin\Release\Microsoft.AspNet.Identity.Core.xml

@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2></h2>
+
+<div>
+    <div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left; width: 100%">
+        <div id="grid">
+        </div>
+        @if (User.IsInRole("Admin") || User.IsInRole("Update"))
+        {
+        <div id="crud">
+            <table>
+                <tr>
+                    <td><input type="button" value="Add New" id='delButton' /></td>
+                </tr>
+            </table>
+        </div>
+        }
+    </div>
+</div>
+
+<script src="~/Scripts/intern/intervieweegrid.js"></script>

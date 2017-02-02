@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Financial Years Index";
+}
+
+<h2></h2>
+
+<div>
+    <div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left; width: 100%">
+        <div id="grid">
+        </div>
+        <div id="crud">
+            <table>
+                <tr>
+                    <td><input type="button" value="Add" id='addButton' /></td>
+                </tr>
+            </table>
+        </div>
+        <div id="mainDemoContainer">
+            <div id="addwindow">
+                <div>Add a Contract Status</div>
+                <div>
+                    <table>
+                        <tr><td>Financial Year</td><td><span>        <input type="text" id="financialyear" /></span></td></tr>
+                        <tr><td>Start Date</td><td><div id="startdate"></div></td></tr>
+                        <tr><td>End Date</td><td><div id="enddate"></div></td></tr>
+                        <tr><td><input type="submit" value="Save" id='addsaveButton' /></td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="~/Scripts/intern/financialyearsgrid.js"></script>

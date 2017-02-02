@@ -1,0 +1,77 @@
+﻿@model CandidateManagement.Data.Models.Interviewee
+@using CandidateManagement.Web.Extensions
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>New Interviewee</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+    <fieldset>
+        <legend></legend>
+        <table>
+            <tr>
+                <td>@Html.Required(m => m.FirstName, "", false)</td>
+                <td>@Html.TextBoxFor(m => m.FirstName)</td>
+
+                <td>@Html.Required(m => m.Surname, "", false)</td>
+                <td>@Html.TextBoxFor(m => m.Surname)</td>
+            </tr>
+            <tr>
+                <td>@Html.Required(m => m.VisaTypeId, "", false)</td>
+                <td><div id="visatype"></div>@Html.HiddenFor(m => m.VisaTypeId)</td>
+            </tr>
+            <tr>
+                <td>@Html.Required(m => m.EthnicityId, "", false)</td>
+                <td><div id="ethnicity"></div>@Html.HiddenFor(m => m.EthnicityId)</td>
+            </tr>
+            <tr>
+                <td>@Html.Required(m => m.ServiceId, "", false)</td>
+                <td><div id="biteservice"></div>@Html.HiddenFor(m => m.ServiceId)</td>
+            </tr>
+            <tr>
+                <td>@Html.Required(m => m.OriginId, "", false)</td>
+                <td><div id="origin"></div>@Html.HiddenFor(m => m.OriginId)</td>
+            </tr>
+            <tr>
+                <td>@Html.Required(m => m.OriginatorId, "", false)</td>
+                <td><div id="originator"></div>@Html.HiddenFor(m => m.OriginatorId)</td>
+            </tr>
+            <tr>
+                <td>@Html.Required(m => m.ProfessionId, "", false)</td>
+                <td><div id="profession"></div>@Html.HiddenFor(m => m.ProfessionId)</td>
+            </tr>
+            <tr>
+                <td>@Html.Required(m => m.SkillId, "", false)</td>
+                <td><div id="skill"></div>@Html.HiddenFor(m => m.SkillId)</td>
+            </tr>
+            <tr>
+                <td>@Html.Required(m => m.InterviewerId, "", false)</td>
+                <td><div id="interviewer"></div>@Html.HiddenFor(m => m.InterviewerId)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(m => m.InterviewDate)</td>
+                <td><div id="interviewdate"></div>@Html.HiddenFor(m => m.InterviewDate)</td>
+            </tr>
+            <tr>
+                <td>@Html.Required(m => m.OutcomeId, "", false)</td>
+                <td><div id="outcome"></div>@Html.HiddenFor(m => m.OutcomeId)</td>
+            </tr>s
+            <tr>
+                <td id="lblsignup">@Html.LabelFor(m => m.SignUpDate)</td>
+                <td><div id="signupdate"></div>@Html.HiddenFor(m => m.SignUpDate)</td>
+            </tr>
+            <tr>
+                <td>@Html.LabelFor(m => m.Comments)</td>
+                <td><div id="comments"></div>@Html.TextAreaFor(m => m.Comments, new { style = "width:200px;height:100px" })</td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Save" id='addsaveButton' /></td>
+            </tr>
+        </table>
+    </fieldset>
+    
+}
+<script src="~/Scripts/intern/intervieweemodel.js"></script>

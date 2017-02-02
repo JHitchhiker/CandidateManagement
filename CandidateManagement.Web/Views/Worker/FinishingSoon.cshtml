@@ -1,0 +1,114 @@
+﻿@{
+    ViewBag.Title = "Update Workers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2></h2>
+
+<div>
+    <div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left; width: 100%">
+        <div id="grid">
+        </div>
+        <div id="jobseeker">
+            <div>Return to Job Seek?</div>
+            <div>
+                <div></div>
+                <table>
+                    <tr>
+                        <td>First Name</td>
+                        <td>@Html.TextBox("seekerfirstname")</td>
+                        <td>Surname</td>
+                        <td>@Html.TextBox("seekersurname")</td>
+                    </tr>
+                    <tr>
+                        <td>Start of Job Seeking</td>
+                        <td><div id="jobseekdate"></div>@Html.Hidden("jobseekerdate")</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td><input type="submit" value="Save" id='confirmjobseek' /></td>
+                        <td><input type="submit" value="Cancel" id='canceljobseek' /></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="renew">
+            <div>Renew Contract</div>
+            <div>
+                <div></div>
+                <table>
+                    <tr>
+                        <td>First Name</td>
+                        <td>@Html.TextBox("renewfirstname")</td>
+                        <td>Surname</td>
+                        <td>@Html.TextBox("renewsurname")</td>
+                    </tr>
+                    <tr>
+                        <td>Contract Status</td>
+                        <td><div id="contractstatus"></div>@Html.Hidden("contractstatusid")</td>
+                    </tr>
+                    <tr>
+                        <td>Contract Start Date</td>
+                        <td><div id="startdate"></div>@Html.Hidden("startingdate")</td>
+                    </tr>
+                    <tr>
+                        <td>New End Date</td>
+                        <td><div id="enddate"></div>@Html.Hidden("contractend")</td>
+                    </tr>
+                    <tr>
+                        <td>Agency</td>
+                        <td><div id="agencyname"></div>@Html.TextBox("agencyname")</td>
+                    </tr>
+                    <tr>
+                        <td>Client</td>
+                        <td>@Html.TextBox("clientname")</td>
+                    </tr>
+                    <tr>
+                        <td>Comments</td>
+                        <td>@Html.TextArea("comments")</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td><input type="submit" value="Save" id='confirmrenewal' /></td>
+                        <td><input type="submit" value="Cancel" id='cancelrenewal' /></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="leaver">
+            <div>Mark as Leaver</div>
+            <div>
+                <div></div>
+                <table>
+                    <tr>
+                        <td>First Name</td>
+                        <td>@Html.TextBox("leaverfirstname")</td>
+                        <td>Surname</td>
+                        <td>@Html.TextBox("leaversurname")</td>
+                    </tr>
+                    <tr>
+                        <td>Leaving Date</td>
+                        <td><div id="leavedate"></div></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td><input type="submit" value="Save" id='confirmleaver' /></td>
+                        <td><input type="submit" value="Cancel" id='cancelleaver' /></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (User.IsInRole("Update") || User.IsInRole("Admin"))
+{
+<script src="~/Scripts/intern/workerfinishingmanagegrid.js"></script>
+}
+else
+{
+    <script src="~/Scripts/intern/workerfinishinggrid.js"></script>
+}

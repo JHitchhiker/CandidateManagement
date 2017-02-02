@@ -1,0 +1,69 @@
+﻿@{
+    ViewBag.Title = "Out of Contract";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2></h2>
+
+<div>
+    <div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left; width: 100%">
+        <div id="grid">
+        </div>
+        <div id="jobseeker">
+            <div>Return to Job Seek?</div>
+            <div>
+                <div>Convert <span id="todelete"></span>?</div>
+                <table>
+                    <tr>
+                        <td>First Name</td>
+                        <td>@Html.TextBox("jobseekfirstname")</td>
+                        <td>Surname</td>
+                        <td>@Html.TextBox("jobseeksurname")</td>
+                    </tr>
+                    <tr>
+                        <td>Start of Job Seeking</td>
+                        <td><div id="jobseekdate"></div>@Html.Hidden("jobseekerdate")</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td><input type="submit" value="Save" id='confirmjobseek' /></td>
+                        <td><input type="submit" value="Cancel" id='canceljobseek' /></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="leaver">
+            <div>Mark as Leaver</div>
+            <div>
+                <div>Leaver <span id="todelete"></span>?</div>
+                <table>
+                    <tr>
+                        <td>First Name</td>
+                        <td>@Html.TextBox("leaverfirstname")</td>
+                        <td>Surname</td>
+                        <td>@Html.TextBox("leaversurname")</td>
+                    </tr>
+                    <tr>
+                        <td>Leaving Date</td>
+                        <td><div id="leavedate"></div></td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td><input type="submit" value="Save" id='confirmleaver' /></td>
+                        <td><input type="submit" value="Cancel" id='cancelleaver' /></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+@if (User.IsInRole("Admin") || User.IsInRole("Update"))
+{
+    <script src="~/Scripts/intern/workeroutofcontractgrid.js"></script>
+}
+else
+{
+    <script src="~/Scripts/intern/workeroutofcontractmanagegrid.js"></script>
+}

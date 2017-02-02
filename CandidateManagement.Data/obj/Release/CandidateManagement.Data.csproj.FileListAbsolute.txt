@@ -1,0 +1,17 @@
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\bin\Release\CandidateManagement.Data.dll.config
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\bin\Release\CandidateManagement.Data.dll
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\bin\Release\CandidateManagement.Data.pdb
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\bin\Release\EntityFramework.dll
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\bin\Release\EntityFramework.SqlServer.dll
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\bin\Release\EntityFramework.xml
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\bin\Release\EntityFramework.SqlServer.xml
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\obj\Release\CandidateManagement.Data.csprojResolveAssemblyReference.cache
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\obj\Release\CandidateManagement.Data.dll
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\obj\Release\CandidateManagement.Data.pdb
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\bin\Release\Microsoft.AspNet.Identity.Core.dll
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\bin\Release\Microsoft.AspNet.Identity.Core.xml
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\obj\Release\CandidateManagement.Data.security.resources
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\obj\Release\CandidateManagement.Data.Migrations.modelupdate.resources
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\obj\Release\CandidateManagement.Data.csproj.GenerateResource.Cache

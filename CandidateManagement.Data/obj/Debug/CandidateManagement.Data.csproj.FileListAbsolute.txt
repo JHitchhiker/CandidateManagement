@@ -1,0 +1,17 @@
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\bin\Debug\CandidateManagement.Data.dll.config
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\bin\Debug\CandidateManagement.Data.dll
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\bin\Debug\CandidateManagement.Data.pdb
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\bin\Debug\EntityFramework.dll
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\bin\Debug\EntityFramework.xml
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\obj\Debug\CandidateManagement.Data.csprojResolveAssemblyReference.cache
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\obj\Debug\CandidateManagement.Data.security.resources
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\obj\Debug\CandidateManagement.Data.Migrations.modelupdate.resources
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\obj\Debug\CandidateManagement.Data.csproj.GenerateResource.Cache
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\obj\Debug\CandidateManagement.Data.dll
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.Data\obj\Debug\CandidateManagement.Data.pdb

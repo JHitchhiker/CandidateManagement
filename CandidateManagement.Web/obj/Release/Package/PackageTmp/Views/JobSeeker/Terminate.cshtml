@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Convert Interviewee";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2></h2>
+
+<div>
+    <div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left; width: 100%">
+        <div id="grid">
+        </div>
+        <div id="confirm">
+            <div>Terminate</div>
+            <div>
+                <div></div>
+                <table>
+                    <tr>
+                        <td>First Name</td>
+                        <td>@Html.TextBox("firstname")</td>
+                        <td>Surname</td>
+                        <td>@Html.TextBox("surname")</td>
+                    </tr>
+                    <tr>
+                        <td>Termination Date</td>
+                        <td><div id="startdate"></div>@Html.Hidden("startingdate")</td>
+                    </tr>
+                    <tr>
+                        <td>Comments</td>
+                        <td>@Html.TextArea("comments")</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td><input type="submit" value="Save" id='confirmOK' /></td>
+                        <td><input type="submit" value="Cancel" id='confirmCancel' /></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/intern/jobseekerterminategrid.js"></script>

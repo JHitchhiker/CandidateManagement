@@ -1,0 +1,16 @@
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.DAL\bin\Debug\CandidateManagement.DAL.dll.config
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.DAL\bin\Debug\CandidateManagement.DAL.dll
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.DAL\bin\Debug\CandidateManagement.DAL.pdb
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.DAL\bin\Debug\CandidateManagement.Data.dll
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.DAL\bin\Debug\EntityFramework.dll
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.DAL\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.DAL\bin\Debug\CandidateManagement.Data.pdb
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.DAL\bin\Debug\EntityFramework.xml
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.DAL\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.DAL\obj\Debug\CandidateManagement.DAL.csprojResolveAssemblyReference.cache
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.DAL\obj\Debug\CandidateManagement.DAL.dll
+D:\Dev\CandidateManagement\CandidateManagement\CandidateManagement.DAL\obj\Debug\CandidateManagement.DAL.pdb

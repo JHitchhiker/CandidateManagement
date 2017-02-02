@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/jqxstyles")
+    @Scripts.Render("~/bundles/jqwidgets")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div><img src="~/Content/images/logo.png" alt="Logo" class="logo-img" >@Html.Partial("_LoginPartial")</div>
+    <header>
+        
+        <div class="content-wrapper">
+            
+            <div >
+                <nav>
+                    <div id="jqxMenu">
+                        <ul>
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Interviewees", "Interviewees", "Interviewee")</li>
+                            <li>@Html.ActionLink("Job Seekers", "JobSeekers", "JobSeeker")
+                                @if (User.IsInRole("Admin") || User.IsInRole("Update"))
+                                {
+                                    <ul>
+                                        <li>@Html.ActionLink("Convert to Job Seeker", "Convert", "JobSeeker")</li>
+                                        <li>@Html.ActionLink("Convert to Worker", "Convert", "Worker")</li>
+                                        <li>@Html.ActionLink("Terminate Job Seeker", "Terminate", "JobSeeker")</li>
+                                    </ul>
+                                }
+                            </li>
+                            <li>@Html.ActionLink("Workers", "Workers", "Worker")
+                                <ul>
+                                    <li>@Html.ActionLink("Contract Ending", "FinishingSoon", "Worker")</li>
+                                    <li>@Html.ActionLink("Out of Contract", "OutOfContract", "Worker")</li>
+                                    @if (User.IsInRole("Admin") || User.IsInRole("Update"))
+                                    { 
+                                        <li>@Html.ActionLink("Terminate Contract", "Terminate", "Worker")</li>
+                                    }
+                                   
+                                </ul>
+                            </li>
+                            <li>@Html.ActionLink("Leavers", "Leavers", "Leaver")
+                            <li>
+                                Reports
+                            <ul>
+                                <li>
+                                    Interview Closure Rates
+                                    <ul>
+                                        <li>@Html.ActionLink("Closure %'s", "OutcomeYTD", "Report")</li>
+                                        <li>@Html.ActionLink("Originator", "OriginatorClosureRates", "Report")</li>
+                                        <li>@Html.ActionLink("Interviewer", "InterviewerOutcomes", "Report")</li>
+                                        <li>@Html.ActionLink("Monthly", "OutcomeByMonth", "Report")</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Stats by Source
+                                    <ul>
+                                        <li>@Html.ActionLink("Monthly", "OutcomeByOriginMonth", "Report")</li>
+                                        <li>@Html.ActionLink("All Outcomes", "OriginByMonth", "Report")</li>
+                                        <li>@Html.ActionLink("Sign Ups Only", "OriginSignupByMonth", "Report")</li>
+                                    </ul>
+                                </li>
+                                <li>@Html.ActionLink("Annual Signups", "AnnualSignups", "Report")</li>
+                                <li>
+                                    Interviews
+                                    <ul>
+                                        <li>@Html.ActionLink("Interviews by Source", "IntervieweesBySourceByMonth", "Report")</li>
+                                    </ul>
+                                </li>
+                                @*<li>Interviewees
+                                    <ul>
+                                        <li>@Html.ActionLink("Interviews by Visa", "IntervieweesByVisaByMonth", "Report")</li>
+                                        <li>@Html.ActionLink("Outcomes By Month", "OutcomeByMonth", "Report")</li>
+                                        <li>@Html.ActionLink("Outcomes By Interviewer", "InterviewerOutcomes", "Report")</li>
+                                        <li>@Html.ActionLink("Outcomes By Origin / Month", "OutcomeByOriginMonth", "Report")</li>
+                                        <li>@Html.ActionLink("Interviewer Outcomes By Month", "OutcomeByInterviewer", "Report")</li>
+                                        <li>@Html.ActionLink("Originator Outcomes By Month", "OutcomeByOriginator", "Report")</li>
+                                        <li>@Html.ActionLink("Conversion Rates By Month", "ConversionByMonth", "Report")</li>
+                                    </ul>
+                                </li>*@
+                                <li>Workers
+                                    <ul>
+                                        <li>@Html.ActionLink("Weekly Working Totals", "WorkingByWeek", "Report")</li>
+                                        <li>@Html.ActionLink("Weekly Monthly Totals", "WorkingByMonth", "Report")</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                            <li type='separator'></li>
+                            @if (User.IsInRole("Admin"))
+                            {
+                                <li>
+                                    Admin
+                                    <ul>
+                                        <li>
+                                            <a href="#">Lookup Management</a>
+                                            <ul>
+                                                <li>@Html.ActionLink("Bite Service", "BiteServices", "BiteService")</li>
+                                                <li>@Html.ActionLink("Contract Status", "ContractStatuses", "ContractStatus")</li>
+                                                <li>@Html.ActionLink("Ethnicities", "Ethnicities", "Ethnicity")</li>
+                                                <li>@Html.ActionLink("Interviewers", "Interviewers", "Interviewer")</li>
+                                                <li>@Html.ActionLink("Memberships", "Memberships", "Membership")</li>
+                                                <li>@Html.ActionLink("Originators", "Originators", "Originator")</li>
+                                                <li>@Html.ActionLink("Origins", "Origins", "Origin")</li>
+                                                <li>@Html.ActionLink("Outcomes", "Outcomes", "Outcome")</li>
+                                                <li>@Html.ActionLink("Professions", "Professions", "Profession")</li>
+                                                <li>@Html.ActionLink("Job Titles", "Skills", "Skill")</li>
+                                                <li>@Html.ActionLink("Visa Types", "VisaTypes", "VisaType")</li>
+                                            </ul>
+                                        </li>
+                                        <li>@Html.ActionLink("Financial Years", "FinancialYears", "Admin")</li>
+                                        <li>
+                                            Users
+                                            <ul>
+                                                <li>@Html.ActionLink("Manage Users", "Users", "User")</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; 2016 - Bite Consulting Group</p>
+            <p></p>
+        </footer>
+    </div>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        $('#jqxMenu').jqxMenu({theme:'bite'});
+    })
+</script>

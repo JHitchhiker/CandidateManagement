@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>CANDIDATE MANAGEMENT</h1>
+    @*<p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            <b>REMEMBER:</b> You cannot have a Job Seeker, Worker or Leaver without first @Html.ActionLink("Creating an Interviewee", "Create","Interviewee")
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Out Of Contract</h2>
+        <p>The list of @Html.ActionLink("CONTRACTORS CURRENTLY OUT OF CONTRACT","OutOfContract","Worker") <b>should always be EMPTY</b></p>
+        
+    </div>
+    <div class="col-md-4">
+        <h2>Contractors for Action</h2>
+        <p><b>Any Contract expiring within 30 days requires a follow up! </b> @Html.ActionLink("click here","FinishingSoon","Worker") to action this list</p>
+    </div>
+</div>

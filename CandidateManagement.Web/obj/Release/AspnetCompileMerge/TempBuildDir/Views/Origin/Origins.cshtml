@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Origin Index";
+}
+
+<h2></h2>
+
+<div>
+    <div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left; width: 100%">
+        <div id="grid">
+        </div>
+        <div id="crud">
+            <table>
+                <tr>
+                    <td><input type="button" value="Add" id='addButton' /></td>
+                    <td><input type="button" value="Delete" id='delButton' /></td>
+                </tr>
+            </table>
+        </div>
+        <div id="mainDemoContainer">
+            <div id="addwindow" style="height:100px">
+                <div>Add a Origin</div>
+                <div>
+                    <table>
+                        <tr><td>Name</td><td><span>        <input type="text" id="addnameinput" /></span></td></tr>
+                        <tr><td>Description </td><td><span><input type="text" id="adddescinput" /></span></td></tr>
+                        <tr><td><input type="submit" value="Save" id='addsaveButton' /></td></tr>
+                    </table>
+                </div>
+            </div>
+            <div id="editwindow">
+                <div>Update a Origin</div>
+                <div>
+                    <table>
+                        <tr><td>Name</td><td><span>        <input type="text" id="editnameinput" /></span></td></tr>
+                        <tr><td>Description </td><td><span><input type="text" id="editdescinput" /></span></td></tr>
+                        <tr><td><input type="submit" value="Save" id='editsaveButton' /></td></tr>
+                    </table>
+                </div>
+            </div>
+            <div id="confirm">
+                <div>Confirm Delete</div>
+                <div>
+                    <div>OK to Delete <span id="todelete"></span>?</div>
+                    <table>
+                        <tr>
+                            <td><input type="submit" value="OK" id='confirmOK' /></td>
+                            <td><input type="submit" value="Cancel" id='confirmCancel' /></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="~/Scripts/intern/lookups/Origingrid.js"></script>

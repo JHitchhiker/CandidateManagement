@@ -1,0 +1,79 @@
+﻿@model CandidateManagement.Data.Models.Interviewee
+@using CandidateManagement.Web.Extensions
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+    <fieldset>
+        <legend></legend>
+        <table>
+            <tr>
+                <td>@Html.DisplayNameFor(m => m.FirstName)</td>
+                <td>@Html.DisplayFor(m => m.FirstName)</td>
+
+                <td>@Html.DisplayNameFor(m => m.Surname)</td>
+                <td>@Html.DisplayFor(m => m.Surname)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(m => m.VisaTypeId)</td>
+                <td>@Html.DisplayFor(m => m.VisaTypeId)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(m => m.EthnicityId)</td>
+                <td>@Html.DisplayFor(m => m.EthnicityId)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(m => m.ServiceId)</td>
+                <td>@Html.DisplayFor(m => m.ServiceId)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(m => m.OriginId)</td>
+                <td>@Html.DisplayFor(m => m.OriginId)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(m => m.OriginatorId)</td>
+                <td>@Html.DisplayFor(m => m.OriginatorId)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(m => m.ProfessionId)</td>
+                <td>@Html.DisplayFor(m => m.ProfessionId)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(m => m.SkillId)</td>
+                <td>@Html.DisplayFor(m => m.SkillId)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(m => m.InterviewerId)</td>
+                <td>@Html.DisplayFor(m => m.InterviewerId)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(m => m.InterviewDate)</td>
+                <td>@Html.DisplayFor(m => m.InterviewDate)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(m => m.OutcomeId)</td>
+                <td>@Html.DisplayFor(m => m.OutcomeId)</td>
+            </tr>s
+            <tr>
+                <td>@Html.DisplayNameFor(m => m.SignUpDate)</td>
+                <td>@Html.TextBoxFor(m => m.SignUpDate)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(m => m.Comments)</td>
+                <td>@Html.DisplayFor(m => m.Comments)</td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Save" id='addsaveButton' /></td>
+            </tr>
+        </table>
+    </fieldset>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
