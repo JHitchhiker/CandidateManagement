@@ -19,10 +19,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/02/2017 17:32:36</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>02/03/2017 18:13:02</publishTime>
+      <publishTime>02/03/2017 18:43:50</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>02/03/2017 18:13:02</publishTime>
+      <publishTime>02/03/2017 18:43:50</publishTime>
     </File>
     <File Include="bin/CandidateManagement.DAL.dll">
       <publishTime>02/03/2017 17:07:52</publishTime>
@@ -34,7 +34,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/03/2017 17:07:52</publishTime>
     </File>
     <File Include="bin/CandidateManagement.Web.dll">
-      <publishTime>02/03/2017 18:12:54</publishTime>
+      <publishTime>02/03/2017 18:43:42</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>02/02/2017 17:32:37</publishTime>
@@ -1114,7 +1114,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/02/2017 17:32:37</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>02/03/2017 18:12:56</publishTime>
+      <publishTime>02/03/2017 18:43:44</publishTime>
     </File>
     <File Include="Scripts/ai.0.22.19-build00125.js">
       <publishTime>02/02/2017 17:32:36</publishTime>
@@ -1751,6 +1751,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Views/Membership/Index.cshtml">
       <publishTime>02/02/2017 17:32:36</publishTime>
+    </File>
+    <File Include="Views/Membership/Memberships.cshtml">
+      <publishTime>12/22/2016 11:49:09</publishTime>
     </File>
     <File Include="Views/Origin/Index.cshtml">
       <publishTime>12/22/2016 11:49:17</publishTime>
