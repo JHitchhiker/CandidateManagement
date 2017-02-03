@@ -17,5 +17,10 @@ namespace CandidateManagement.Data.ReportModels
         public decimal DaysToJob { get; set; }
         public decimal SuccessRate { get; set; }
         public int JobSeekers { get; set; }
+        public decimal ConversionRate { get; set; }
+        public int YTDInterviews { get; set; }
+        public int RepeatContractors { get; set; }
+        public decimal RepeatRatio { get; set; }
+        public int OutOfContract { get; set; }
     }
 }

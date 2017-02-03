@@ -13,11 +13,11 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <div><img src="~/Content/images/logo.png" alt="Logo" class="logo-img"></div>
+    <div><img src="~/Content/images/logo.png" alt="Logo" class="logo-img" >@Html.Partial("_LoginPartial")</div>
     <header>
         
         <div class="content-wrapper">
-            @Html.Partial("_LoginPartial")
+            
             <div >
                 <nav>
                     <div id="jqxMenu">

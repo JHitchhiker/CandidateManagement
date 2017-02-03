@@ -192,5 +192,6 @@ namespace CandidateManagement.Web.Controllers
             var result = _service.DashboardStats();
             return Json(result, JsonRequestBehavior.AllowGet);
         }
+
     }
 }

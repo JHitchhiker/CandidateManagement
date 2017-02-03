@@ -12,7 +12,8 @@ namespace CandidateManagement.Web.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return RedirectToAction("Dashboard");
+            
         }
 
         public ActionResult About()
@@ -26,6 +27,11 @@ namespace CandidateManagement.Web.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+
+        public ActionResult Dashboard()
+        {
             return View();
         }
         

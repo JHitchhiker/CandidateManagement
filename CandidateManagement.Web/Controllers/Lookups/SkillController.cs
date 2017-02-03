@@ -21,7 +21,7 @@ namespace CandidateManagement.Web.Controllers.Lookups
         //
         // GET: /Skill/
 
-        public ActionResult Index()
+        public ActionResult Skills()
         {
             var model = service.GetAll().Select(e => new { e.Id, e.Name, e.Description }).ToList();
             return View(model);

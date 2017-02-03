@@ -25,10 +25,72 @@
                 id: 'Id'
             };
     var dataAdapter = new $.jqx.dataAdapter(source);
-    
+    var chartsource =
+            {
+                datatype: "json",
+                datafields: [
+					 { name: 'Origin', type: 'string' },
+					 { name: 'Apr', type: 'int' },
+					 { name: 'May', type: 'int' },
+                     { name: 'Jun', type: 'int' },
+					 { name: 'Jul', type: 'int' },
+                     { name: 'Aug', type: 'int' },
+					 { name: 'Sep', type: 'int' },
+                     { name: 'Oct', type: 'int' },
+					 { name: 'Nov', type: 'int' },
+                     { name: 'Dec', type: 'int' },
+					 { name: 'Jan', type: 'int' },
+                     { name: 'Feb', type: 'int' },
+					 { name: 'Mar', type: 'int' },
+                     { name: 'Total', type: 'int' },
+                ],
+                url: '../Report/GetOriginSignupbyMonthChart',
+                id: 'Id'
+            };
+    var chartdataAdapter = new $.jqx.dataAdapter(chartsource);
+
     var basicDemo = (function () {
         //Creating all page elements which are jqxWidgets
         function _createElements() {
+            var settings = {
+                title: "YTD Sign Ups By Source",
+                description: "",
+                enableAnimations: true,
+                showLegend: true,
+                showBorderLine: true,
+                legendLayout: { left: 750, top: 160, width: 300, height: 200, flow: 'vertical' },
+                padding: { left: 5, top: 5, right: 5, bottom: 5 },
+                titlePadding: { left: 0, top: 0, right: 0, bottom: 10 },
+                source: chartdataAdapter,
+                colorScheme: 'scheme03',
+                seriesGroups:
+                    [
+                        {
+                            type: 'pie',
+                            showLabels: true,
+                            series:
+                                [
+                                    {
+                                        dataField: 'Total',
+                                        displayText: 'Origin',
+                                        labelRadius: 240,
+                                        initialAngle: 15,
+                                        radius: 220,
+                                        centerOffset: 0,
+                                        offsetX:350,
+                                        formatFunction: function (value) {
+                                            if (isNaN(value))
+                                                return value;
+                                            return parseFloat(value);
+                                        },
+                                    }
+                                ]
+                        }
+                    ]
+            };
+            // setup the chart
+            $('#chartContainer').jqxChart(settings);    
+
             $("#grid").jqxGrid(
             {
                 width: '100%',
@@ -37,7 +99,6 @@
                 source: dataAdapter,
                 pageSize: 20,
                 pageable: true,
-
                 columns: [
                             { text: 'Origin', datafield: 'Origin', align: 'center', cellsalign: 'left' },
                             { text: 'Apr', datafield: 'Apr', align: 'center', cellsalign: 'right' },

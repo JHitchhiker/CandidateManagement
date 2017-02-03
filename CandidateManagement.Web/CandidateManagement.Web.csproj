@@ -258,6 +258,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\logo.png" />
     <Content Include="Content\JQWidgets\images\backgroundTop.png" />
     <Content Include="Content\JQWidgets\images\backImage.png" />
     <Content Include="Content\JQWidgets\images\bg_black.png" />
@@ -571,7 +572,6 @@
     <Content Include="Scripts\intern\lookups\dashboard.js" />
     <Content Include="Scripts\intern\lookups\initdashboard.js" />
     <Content Include="Scripts\intern\reports\annualsignups.js" />
-    <Content Include="Scripts\intern\reports\charttest.js" />
     <Content Include="Scripts\intern\reports\intervieweesbysourcebymonth.js" />
     <Content Include="Scripts\intern\reports\originssignupbymonth.js" />
     <Content Include="Scripts\intern\reports\originsbymonth.js" />
@@ -768,7 +768,7 @@
     <Content Include="Views\ContractStatus\ContractStatuses.cshtml" />
     <Content Include="Views\Ethnicity\Ethnicities.cshtml" />
     <Content Include="Views\Interviewer\Interviewers.cshtml" />
-    <Content Include="Views\Membership\Index.cshtml" />
+    <Content Include="Views\Membership\Memberships.cshtml" />
     <Content Include="Views\Origin\Origins.cshtml" />
     <Content Include="Views\Originator\Originators.cshtml" />
     <Content Include="Views\Outcome\Outcomes.cshtml" />
@@ -806,11 +806,10 @@
     <Content Include="Views\Report\OriginSignupByMonth.cshtml" />
     <Content Include="Views\Report\AnnualSignups.cshtml" />
     <Content Include="Views\Dashboard.cshtml" />
-    <Content Include="Views\Home\DashBoard.cshtml" />
+    <Content Include="Views\Home\Dashboard.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

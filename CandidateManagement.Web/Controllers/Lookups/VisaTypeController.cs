@@ -21,7 +21,7 @@ namespace CandidateManagement.Web.Controllers.Lookups
         //
         // GET: /VisaType/
 
-        public ActionResult Index()
+        public ActionResult VisaTypes()
         {
             var model = service.GetAll().Select(e => new { e.Id, e.Name, e.Description }).ToList();
             return View(model);
