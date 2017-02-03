@@ -26,7 +26,11 @@ namespace CandidateManagement.Web.Controllers.Lookups
             var model = service.GetAll().Select(e => new { e.Id, e.Name, e.Description }).ToList();
             return View(model);
         }
-
+        public ActionResult Ethnicities()
+        {
+            var model = service.GetAll().Select(e => new { e.Id, e.Name, e.Description }).ToList();
+            return View(model);
+        }
         [AllowAnonymous]
         public JsonResult GetEthnicities()
         {

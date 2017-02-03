@@ -768,7 +768,7 @@
     <Content Include="Views\ContractStatus\ContractStatuses.cshtml" />
     <Content Include="Views\Ethnicity\Ethnicities.cshtml" />
     <Content Include="Views\Interviewer\Interviewers.cshtml" />
-    <Content Include="Views\Membership\Index.cshtml" />
+    <Content Include="Views\Membership\Memberships.cshtml" />
     <Content Include="Views\Origin\Origins.cshtml" />
     <Content Include="Views\Originator\Originators.cshtml" />
     <Content Include="Views\Outcome\Outcomes.cshtml" />
