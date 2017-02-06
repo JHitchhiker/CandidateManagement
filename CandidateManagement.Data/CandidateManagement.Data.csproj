@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="Context\CMContext.cs" />
     <Compile Include="Context\SecurityContext.cs" />
+    <Compile Include="Models\LeavingReason.cs" />
     <Compile Include="ReportModels\DashboardStat.cs" />
     <Compile Include="Migrations\201701101528515_security.cs" />
     <Compile Include="Migrations\201701101528515_security.Designer.cs">
