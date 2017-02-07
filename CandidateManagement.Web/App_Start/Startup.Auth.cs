@@ -47,24 +47,6 @@ namespace CandidateManagement.Web
             // This is similar to the RememberMe option when you log in.
             app.UseTwoFactorRememberBrowserCookie(DefaultAuthenticationTypes.TwoFactorRememberBrowserCookie);
 
-            // Uncomment the following lines to enable logging in with third party login providers
-            //app.UseMicrosoftAccountAuthentication(
-            //    clientId: "",
-            //    clientSecret: "");
-
-            //app.UseTwitterAuthentication(
-            //   consumerKey: "",
-            //   consumerSecret: "");
-
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
-
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
             SecurityContext context = new SecurityContext();
             var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
             var UserManager = new UserManager<IdentityUser>(new UserStore<IdentityUser>(context));
@@ -78,33 +60,21 @@ namespace CandidateManagement.Web
             }
 
             // creating Creating Manager role    
-            if (!roleManager.RoleExists("Interviewee"))
-            {
-                var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
-                role.Name = "Interviewee";
-                roleManager.Create(role);
-
-            }
-
-            // creating Creating Employee role    
-            if (!roleManager.RoleExists("JobSeeker"))
-            {
-                var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
-                role.Name = "JobSeeker";
-                roleManager.Create(role);
-
-            }
-            if (!roleManager.RoleExists("Worker"))
-            {
-                var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
-                role.Name = "JobSeeker";
-                roleManager.Create(role);
-            }
             if (!roleManager.RoleExists("Reader"))
             {
                 var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
                 role.Name = "Reader";
                 roleManager.Create(role);
+
+            }
+
+            // creating Creating Employee role    
+            if (!roleManager.RoleExists("Update"))
+            {
+                var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
+                role.Name = "Update";
+                roleManager.Create(role);
+
             }
         }
     }

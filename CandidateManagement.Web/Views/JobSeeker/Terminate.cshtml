@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "Convert Interviewee";
+    ViewBag.Title = "Terminate Job Seeker";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -27,6 +27,10 @@
                     <tr>
                         <td>Comments</td>
                         <td>@Html.TextArea("comments")</td>
+                    </tr>
+                    <tr>
+                        <td>Reason</td>
+                        <td><div id="leavingReason"></div></td>
                     </tr>
                 </table>
                 <table>

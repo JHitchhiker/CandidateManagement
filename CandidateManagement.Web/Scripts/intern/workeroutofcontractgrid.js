@@ -4,6 +4,8 @@
     var delName = "";
     var jobseekdate;
     var leavedate;
+    var leavingReasonId;
+
     var source =
             {
                 datatype: "json",
@@ -29,6 +31,18 @@
                 id: 'Id'
             };
     var contractStatusAdapter = new $.jqx.dataAdapter(contractStatusSource);
+    var leavingSource =
+            {
+                datatype: "json",
+                datafields: [
+					 { name: 'Id', type: 'int' },
+					 { name: 'Name', type: 'string' },
+					 { name: 'Description', type: 'string' }
+                ],
+                url: '../LeavingReason/GetLeavingReasons',
+                id: 'Id'
+            };
+    var leavingdataAdapter = new $.jqx.dataAdapter(leavingSource);
 
     var basicDemo = (function () {
         function _addEventListeners() {
@@ -45,7 +59,7 @@
                 $('#grid').jqxDataTable('updateBoundData');
             });
             $('#confirmleaver').click(function () {
-                var data = { id: id, startDate: dateStart };
+                var data = { id: id, finishDate: leavedate, leavingReasonId: leavingReasonId };
                 $.ajax({
                     url: '../Worker/ConvertToLeaver',
                     data: data,
@@ -54,7 +68,7 @@
                 });
                 function errfunc(data) { alert(data); }
                 $('#leaver').jqxWindow('close');
-                $('#grid').jqxDataTable('updateBoundData');
+                window.location.href = "../Worker/OutOfContract";
             });
             $('#cancelleaver').click(function () {
                 $('#leaver').jqxWindow('close');
@@ -67,6 +81,13 @@
             });
             $('#leavedate').on('valueChanged', function (event) {
                 leavedate = $("#leavedate").val();
+            });
+            $('#leavingReason').on('select', function (event) {
+                var args = event.args;
+                if (args) {
+                    var item = args.item;
+                    leavingReasonId = item.value;
+                }
             });
         };
         function _createElements() {
@@ -134,6 +155,8 @@
 
             $("#jobseekdate").jqxDateTimeInput({ width: '250px', height: '25px', formatString: 'dd-MM-yyyy', theme: 'bite' });
             $("#leavedate").jqxDateTimeInput({ width: '250px', height: '25px', formatString: 'dd-MM-yyyy', theme: 'bite' });
+
+            $("#leavingReason").jqxDropDownList({ source: leavingdataAdapter, displayMember: "Name", valueMember: "Id" });
         };
         $("#grid").jqxDataTable('hideColumn', 'Id');
         function _createWindow() {

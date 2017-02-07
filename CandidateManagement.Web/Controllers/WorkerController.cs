@@ -65,7 +65,7 @@ namespace CandidateManagement.Web.Controllers
         }
 
         [HttpPost]
-        public void TerminateWorker(int id, DateTime terminateDate, bool leaver)
+        public void TerminateWorker(int id, DateTime terminateDate, bool leaver, int leavingReasonId)
         {
             if (!leaver)
             {
@@ -84,7 +84,7 @@ namespace CandidateManagement.Web.Controllers
                 worker.Completed = true;
                 _service.Update(worker);
 
-                var leave = new Leaver { IntervieweeId = worker.IntervieweeId, LeavingDate = terminateDate };
+                var leave = new Leaver { IntervieweeId = worker.IntervieweeId, LeavingDate = terminateDate, LeavingReasonId = leavingReasonId };
                 _leaverService.Create(leave);
             }
         }
@@ -145,10 +145,9 @@ namespace CandidateManagement.Web.Controllers
                 var jobseeker = new JobSeeker { IntervieweeId = worker.IntervieweeId, DateStart = startDate, CreatedBy = userid, ChangedBy = userid };
                 _jobseekerService.Create(jobseeker);
             }
-            RedirectToAction("Index");
         }
         [HttpPost]
-        public void ConvertToLeaver(int id, DateTime finishDate)
+        public void ConvertToLeaver(int id, DateTime finishDate, int leavingReasonId)
         {
             if (finishDate == null)
             {
@@ -156,13 +155,14 @@ namespace CandidateManagement.Web.Controllers
             }
             var userid = User.Identity.GetUserId();
             var worker = _service.GetById(id);
-            var leaver = new Leaver { IntervieweeId = worker.IntervieweeId, LeavingDate = finishDate, CreatedBy = userid, ChangedBy = userid };
+
+            var leaver = new Leaver { IntervieweeId = worker.IntervieweeId, LeavingDate = finishDate, CreatedBy = userid, ChangedBy = userid, LeavingReasonId = leavingReasonId };
             _leaverService.Create(leaver);
 
             worker.Completed = true;
             worker.ChangedBy = userid;
             _service.Update(worker);
-            RedirectToAction("Index");
+            
         }
 
         public void RenewContract(int id, DateTime startDate, DateTime endDate, int contractStatus)
