@@ -93,6 +93,7 @@
     <Compile Include="ReportModels\ConversionByMonth.cs" />
     <Compile Include="ReportModels\AnnualSignups.cs" />
     <Compile Include="ReportModels\ClosureRates\OriginatorClosureRates.cs" />
+    <Compile Include="ReportModels\OriginatorLeavers.cs" />
     <Compile Include="ReportModels\WorkingTotalByMonth.cs" />
     <Compile Include="ReportModels\InterviewsByVisaByMonth.cs" />
     <Compile Include="ReportModels\ClosureRates\InterviewerClosureRates.cs" />
