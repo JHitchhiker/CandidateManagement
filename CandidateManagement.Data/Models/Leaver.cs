@@ -11,8 +11,12 @@ namespace CandidateManagement.Data.Models
     {
         public int IntervieweeId { get; set; }
         public DateTime LeavingDate { get; set; }
+        public int LeavingReasonId { get; set; }
 
         [ForeignKey("IntervieweeId")]
         public virtual Interviewee Interviewee { get; set; }
+
+        [ForeignKey("LeavingReasonId")]
+        public virtual LeavingReason LeavingReason { get; set; }
     }
 }

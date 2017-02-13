@@ -126,5 +126,11 @@ namespace CandidateManagement.DAL
                            .SqlQuery<DashboardStat>("sp_DASHBOARD_Main")
                            .ToList();
         }
+        public List<OriginatorLeaver> OriginatorLeavers()
+        {
+            return _context.Database
+                           .SqlQuery<OriginatorLeaver>("usp_REPORT_OiginatorLeavers")
+                           .ToList();
+        }
     }
 }

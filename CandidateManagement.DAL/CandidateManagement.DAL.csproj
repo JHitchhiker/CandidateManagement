@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Concrete\BaseRepository.cs" />
+    <Compile Include="Concrete\LeavingReasonRepository.cs" />
     <Compile Include="Concrete\BiteServiceRepository.cs" />
     <Compile Include="Concrete\FinancialYearRepository.cs" />
     <Compile Include="Concrete\InterviewerRepository.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="Concrete\WorkerRepository.cs" />
     <Compile Include="Interfaces\IFinancialYearRepository.cs" />
     <Compile Include="Interfaces\ILeaverRepository.cs" />
+    <Compile Include="Interfaces\ILeavingReasonRepository.cs" />
     <Compile Include="Interfaces\IReportRepository.cs" />
     <Compile Include="Interfaces\IWorkerRepository.cs" />
     <Compile Include="Interfaces\IJobSeekerRepository.cs" />

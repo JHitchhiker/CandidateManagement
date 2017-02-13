@@ -60,7 +60,7 @@ namespace CandidateManagement.Web.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Terminate(int id, DateTime leaveDate)
+        public void Terminate(int id, DateTime leaveDate, int leavingReason)
         {
             var userid = User.Identity.GetUserId();
             var seeker = _service.GetById(id);
@@ -68,9 +68,8 @@ namespace CandidateManagement.Web.Controllers
             seeker.ChangedBy = userid;
             _service.Update(seeker);
 
-            var leaver = new Leaver { IntervieweeId = seeker.IntervieweeId, LeavingDate = leaveDate, ChangedBy = userid, CreatedBy = userid };
+            var leaver = new Leaver { IntervieweeId = seeker.IntervieweeId, LeavingDate = leaveDate, ChangedBy = userid, CreatedBy = userid, LeavingReasonId = leavingReason };
             _leaverService.Create(leaver);
-            return RedirectToAction("Index");
         }
         [HttpPost]
         public ActionResult Convert(int id, DateTime startDate, string comments)

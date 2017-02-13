@@ -227,6 +227,7 @@
     <Compile Include="Controllers\IntervieweeController.cs" />
     <Compile Include="Controllers\JobSeekerController.cs" />
     <Compile Include="Controllers\LeaverController.cs" />
+    <Compile Include="Controllers\Lookups\LeavingReasonController.cs" />
     <Compile Include="Controllers\Lookups\BiteServiceController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Lookups\OriginatorController.cs" />
@@ -569,6 +570,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Properties\PublishProfiles\Local Deploy.pubxml" />
+    <Content Include="Scripts\intern\lookups\leavingreasongrid.js" />
     <Content Include="Scripts\intern\lookups\dashboard.js" />
     <Content Include="Scripts\intern\lookups\initdashboard.js" />
     <Content Include="Scripts\intern\reports\annualsignups.js" />
@@ -807,6 +809,7 @@
     <Content Include="Views\Report\AnnualSignups.cshtml" />
     <Content Include="Views\Dashboard.cshtml" />
     <Content Include="Views\Home\Dashboard.cshtml" />
+    <Content Include="Views\LeavingReason\LeavingReasons.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

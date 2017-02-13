@@ -3,6 +3,8 @@
     var id = 0;
     var dateStart;
     var comments;
+    var leavingReasonId;
+
     var source =
             {
                 datatype: "json",
@@ -16,12 +18,24 @@
                 id: 'Id'
             };
     var dataAdapter = new $.jqx.dataAdapter(source);
+    var leavingSource =
+            {
+                datatype: "json",
+                datafields: [
+					 { name: 'Id', type: 'int' },
+					 { name: 'Name', type: 'string' },
+					 { name: 'Description', type: 'string' }
+                ],
+                url: '../LeavingReason/GetLeavingReasons',
+                id: 'Id'
+            };
+    var leavingdataAdapter = new $.jqx.dataAdapter(leavingSource);
 
     var basicDemo = (function () {
         //Adding event listeners
         function _addEventListeners() {
             $('#confirmOK').click(function () {
-                var data = { id: id, terminateDate: dateStart, leaver: false };
+                var data = { id: id, terminateDate: dateStart, leaver: false, leavingReason:leavingReasonId };
                 $.ajax({
                     url: '../Worker/TerminateWorker',
                     data: data,
@@ -34,7 +48,7 @@
             });
 
             $('#confirmleaver').click(function () {
-                var data = { id: id, terminateDate: dateStart, leaver: true};
+                var data = { id: id, terminateDate: dateStart, leaver: true, leavingReason: leavingReasonId };
                 $.ajax({
                     url: '../Worker/TerminateWorker',
                     data: data,
@@ -45,12 +59,24 @@
                 $('#confirmleaver').jqxWindow('close');
                 window.location.href='../Worker/Terminate';
             });
-
+            $('#confirmCancel').click(function () {
+                $('#confirm').jqxWindow('close');
+            });
+            $('#cancelleaver').click(function () {                
+                $('#leaver').jqxWindow('close');
+            });
             $('#jobseekdate').on('valueChanged', function (event) {
                 dateStart = $('#jobseekdate').val();
             });
             $('#leavedate').on('valueChanged', function (event) {
                 dateStart = $('#leavedate').val();
+            });
+            $('#leavingReason').on('select', function (event) {
+                var args = event.args;
+                if (args) {
+                    var item = args.item;
+                    leavingReasonId = item.value;
+                }
             });
         };
         //Creating all page elements which are jqxWidgets
@@ -116,10 +142,13 @@
                     idx = args.index;
                     id = $("#grid").jqxDataTable('getCellValue', idx, 'Id');
                 });
+
             $('#confirmOK').jqxButton({ width: '70px', theme: 'bite' });
             $('#confirmCancel').jqxButton({ width: '70px', theme: 'bite' });
             $('#confirmleaver').jqxButton({ width: '70px', theme: 'bite' });
-            $('#confirmleaver').jqxButton({ width: '70px', theme: 'bite' });
+            $('#cancelleaver').jqxButton({ width: '70px', theme: 'bite' });
+
+            $("#leavingReason").jqxDropDownList({ source: leavingdataAdapter, displayMember: "Name", valueMember: "Id" });
 
             $("#jobseekdate").jqxDateTimeInput({ width: '250px', height: '25px', formatString: 'dd-MM-yyyy', theme: 'bite' });
             $("#leavedate").jqxDateTimeInput({ width: '250px', height: '25px', formatString: 'dd-MM-yyyy', theme: 'bite' });

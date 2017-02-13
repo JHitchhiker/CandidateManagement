@@ -40,5 +40,6 @@ namespace CandidateManagement.Data.Context
         public DbSet<Worker> Workers { get; set; }
         public DbSet<Leaver> Leavers { get; set; }
         public DbSet<FinancialYear> FinancialYears { get; set; }
+        public DbSet<LeavingReason> LeavingReasons { get; set; }
     }
 }

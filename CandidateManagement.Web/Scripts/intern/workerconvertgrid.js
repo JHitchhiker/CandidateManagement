@@ -117,7 +117,7 @@
             $('#confirmCancel').jqxButton({ width: '70px', theme:'bite' });
             $("#startdate").jqxDateTimeInput({ width: '250px', height: '25px', formatString: 'dd-MM-yyyy', theme:'bite' });
             $("#enddate").jqxDateTimeInput({ width: '250px', height: '25px', formatString: 'dd-MM-yyyy', theme:'bite' });
-            $("#contractstatus").jqxDropDownList({ source: contractStatusAdapter, displayMember: "Name", valueMember: "Id", theme:'bite' });
+            $("#contractstatus").jqxDropDownList({ source: contractStatusAdapter, displayMember: "Name", valueMember: "Id", theme: 'bite' });
         };
         $("#grid").jqxDataTable('hideColumn', 'Id');
         //Creating the demo window

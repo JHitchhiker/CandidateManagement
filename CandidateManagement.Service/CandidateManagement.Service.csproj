@@ -41,12 +41,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Concrete\BiteServiceService.cs" />
+    <Compile Include="Concrete\LeavingReasonService.cs" />
     <Compile Include="Concrete\ContractStatusService.cs" />
     <Compile Include="Concrete\EthnicityService.cs" />
     <Compile Include="Concrete\FinancialYearService.cs" />
     <Compile Include="Concrete\LeaverService.cs" />
     <Compile Include="Concrete\ReportService.cs" />
     <Compile Include="Interface\IBiteServiceService.cs" />
+    <Compile Include="Interface\ILeavingReasonService.cs" />
     <Compile Include="Interface\IContractStatusService.cs" />
     <Compile Include="Interface\IEthnicityService.cs" />
     <Compile Include="Interface\IFinancialYearService.cs" />

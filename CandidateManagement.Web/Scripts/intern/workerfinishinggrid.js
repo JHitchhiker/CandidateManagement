@@ -6,6 +6,7 @@
     var leavedate;
     var dateStart;
     var dateEnd;
+    var leavingReasonId;
 
     var source =
             {
@@ -32,6 +33,18 @@
                 id: 'Id'
             };
     var contractStatusAdapter = new $.jqx.dataAdapter(contractStatusSource);
+    var leavingSource =
+            {
+                datatype: "json",
+                datafields: [
+					 { name: 'Id', type: 'int' },
+					 { name: 'Name', type: 'string' },
+					 { name: 'Description', type: 'string' }
+                ],
+                url: '../LeavingReason/GetLeavingReasons',
+                id: 'Id'
+            };
+    var leavingdataAdapter = new $.jqx.dataAdapter(leavingSource);
 
     var basicDemo = (function () {
         function _addEventListeners() {
@@ -49,7 +62,7 @@
                 $('#grid').jqxDataTable('updateBoundData');
             });
             $('#confirmleaver').click(function () {
-                var data = { id: id, finishDate: dateEnd };
+                var data = { id: id, finishDate: dateEnd, leavingReasonId: leavingReasonId };
                 $.ajax({
                     url: '../Worker/ConvertToLeaver',
                     data: data,
@@ -103,7 +116,13 @@
                     $("#contractstatus").val(item.value);
                 }
             });
-
+            $('#leavingReason').on('select', function (event) {
+                var args = event.args;
+                if (args) {
+                    var item = args.item;
+                    leavingReasonId = item.value;
+                }
+            });
         };
         function _createElements() {
             $("#grid").jqxGrid(
@@ -137,6 +156,7 @@
             $('#cancelleaver').jqxButton({ width: '70px', theme: 'bite' });
 
             $("#contractstatus").jqxDropDownList({ source: contractStatusAdapter, displayMember: "Name", valueMember: "Id", theme: 'bite' });
+            $("#leavingReason").jqxDropDownList({ source: leavingdataAdapter, displayMember: "Name", valueMember: "Id" });
 
             $("#jobseekdate").jqxDateTimeInput({ width: '250px', height: '25px', formatString: 'dd-MM-yyyy', theme: 'bite' });
             $("#leavedate").jqxDateTimeInput({ width: '250px', height: '25px', formatString: 'dd-MM-yyyy', theme: 'bite' });

@@ -59,6 +59,7 @@ namespace CandidateManagement.Web.App_Start
             container.RegisterType<IWorkerService, WorkerService>();
             container.RegisterType<IReportService, ReportService>();
             container.RegisterType<IFinancialYearService, FinancialYearService>();
+            container.RegisterType<ILeavingReasonService, LeavingReasonService>();
 
             container.RegisterType<IBiteServiceRepository, BiteServiceRepository>();
             container.RegisterType<IContractStatusRepository, ContractStatusRepository>();
@@ -77,6 +78,7 @@ namespace CandidateManagement.Web.App_Start
             container.RegisterType<IWorkerRepository, WorkerRepository>();
             container.RegisterType<IReportRepository, ReportRepository>();
             container.RegisterType<IFinancialYearRepository, FinancialYearRepository>();
+            container.RegisterType<ILeavingReasonRepository, LeavingReasonRepository>();
 
 
             container.RegisterType<AccountController>(new InjectionConstructor());

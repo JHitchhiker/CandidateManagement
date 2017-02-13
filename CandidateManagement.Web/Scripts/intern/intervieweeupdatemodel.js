@@ -237,11 +237,23 @@
             $("#outcome").on('bindingComplete', function (event) {
                 $("#outcome").jqxDropDownList('val', $("#OutcomeId").val());
             });
-            var interviewdate;
-            interviewdate = Date.parse($("#InterviewDate").val());
+            
+            var tempDate = $("#InterviewDate").val();
+            var datePart = tempDate.split(/[^0-9]/);
+            var interviewdate = new Date(datePart[2], datePart[1] - 1, datePart[0]);
+            
+
+            tempDate = $("#SignUpDate").val();
+            datePart = tempDate.split(/[^0-9]/);
+            var signupdate = new Date(datePart[2], datePart[1] - 1, datePart[0]);
+
             ////datepicker
-            $("#interviewdate").jqxDateTimeInput('setDate', interviewdate);
-            //$("#signupdate").jqxDateTimeInput({ width: '250px', height: '25px', formatString: 'd' });
+            $("#interviewdate").jqxDateTimeInput('setDate', new Date(interviewdate));
+            if (signupdate!=null)
+            {
+                $("#signupdate").jqxDateTimeInput('setDate', new Date(signupdate));
+            }
+            
 
         };
 

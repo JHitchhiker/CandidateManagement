@@ -4,6 +4,7 @@
     var delName = "";
     var jobseekdate;
     var leavedate;
+   
     var source =
             {
                 datatype: "json",
@@ -29,7 +30,7 @@
                 id: 'Id'
             };
     var contractStatusAdapter = new $.jqx.dataAdapter(contractStatusSource);
-
+    
     var basicDemo = (function () {
         function _addEventListeners() {
             $('#confirmjobseeker').click(function () {
@@ -45,7 +46,7 @@
                 $('#grid').jqxDataTable('updateBoundData');
             });
             $('#confirmleaver').click(function () {
-                var data = { id: id, startDate: dateStart };
+                var data = { id: id, startDate: dateStart, leavingReasonId: leavingReasonId };
                 $.ajax({
                     url: '../Worker/ConvertToLeaver',
                     data: data,
@@ -68,6 +69,7 @@
             $('#leavedate').on('valueChanged', function (event) {
                 leavedate = $("#leavedate").val();
             });
+            
         };
         function _createElements() {
             $("#grid").jqxGrid(
@@ -97,7 +99,7 @@
             $('#canceljobseek').jqxButton({ width: '70px', theme: 'bite' });
             $('#confirmleaver').jqxButton({ width: '70px', theme: 'bite' });
             $('#cancelleaver').jqxButton({ width: '70px', theme: 'bite' });
-
+            
             $("#jobseekdate").jqxDateTimeInput({ width: '250px', height: '25px', formatString: 'dd-MM-yyyy', theme: 'bite' });
             $("#leavedate").jqxDateTimeInput({ width: '250px', height: '25px', formatString: 'dd-MM-yyyy', theme: 'bite' });
         };

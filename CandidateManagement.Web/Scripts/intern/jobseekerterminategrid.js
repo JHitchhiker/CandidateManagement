@@ -4,6 +4,8 @@
     var delName = "";
     var dateStart;
     var comments;
+    var leavingReasonId;
+
     var source =
             {
                 datatype: "json",
@@ -19,12 +21,25 @@
             };
     var dataAdapter = new $.jqx.dataAdapter(source);
 
+    var leavingSource = 
+            {
+                datatype: "json",
+                datafields: [
+					 { name: 'Id', type: 'int' },
+					 { name: 'Name', type: 'string' },
+					 { name: 'Description', type: 'string' }
+                ],
+                url: '../LeavingReason/GetLeavingReasons',
+                id: 'Id'
+            };
+    var leavingdataAdapter = new $.jqx.dataAdapter(leavingSource);
+
     var basicDemo = (function () {
         //Adding event listeners
         function _addEventListeners() {
 
             $('#confirmOK').click(function () {
-                var data = { id: id, leaveDate: dateStart };
+                var data = { id: id, leaveDate: dateStart, leavingReason: leavingReasonId };
                 $.ajax({
                     url: '../JobSeeker/Terminate',
                     data: data,
@@ -35,6 +50,9 @@
                 $('#confirm').jqxWindow('close');
                 window.location.href='../JobSeeker/Terminate';
             });
+            $('#confirmCancel').click(function () {
+                $('#confirm').jqxWindow('close');
+            });
 
             $('#startdate').on('valueChanged', function (event) {
                 $("#startingdate").val($('#startdate').val());
@@ -43,6 +61,13 @@
             $('#startdate').on('closed', function (event) {
                 $("#startingdate").val($('#startdate').val());
                 dateStart = $('#startdate').val();
+            });
+            $('#leavingReason').on('select', function (event) {
+                var args = event.args;
+                if (args) {
+                    var item = args.item;
+                    leavingReasonId = item.value;
+                }
             });
         };
         //Creating all page elements which are jqxWidgets
@@ -93,7 +118,9 @@
                 });
             $('#confirmOK').jqxButton({ width: '70px', theme:"bite" });
             $('#confirmCancel').jqxButton({ width: '70px', theme: "bite" });
-            $("#startdate").jqxDateTimeInput({ width: '250px', height: '25px', formatString: 'dd-MM-yyyy', theme:"bite" });
+            $("#startdate").jqxDateTimeInput({ width: '250px', height: '25px', formatString: 'dd-MM-yyyy', theme: "bite" });
+            $("#leavingReason").jqxDropDownList({ source: leavingdataAdapter, displayMember: "Name", valueMember: "Id" });
+
         };
         $("#grid").jqxDataTable('hideColumn', 'Id');
         //Creating the demo window
